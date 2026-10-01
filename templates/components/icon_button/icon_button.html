@@ -1,0 +1,10 @@
+{{define "icon_button"}}
+<button
+    {{if .ID}}id="{{.ID}}"{{end}}
+    {{if .Action}}data-action="{{.Action}}"{{end}}
+    class="icon-btn{{if .Class}} {{.Class}}{{end}}"
+    {{if .Title}}title="{{.Title}}"{{end}}
+>
+    <span class="material-symbols-outlined"{{if .IconID}} id="{{.IconID}}"{{end}}>{{.Icon}}</span>
+</button>
+{{end}}

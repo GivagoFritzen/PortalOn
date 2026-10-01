@@ -1,0 +1,85 @@
+{
+  "app": {
+    "name": "PortalOn",
+    "pageTitle": "PortalOn - Home Server"
+  },
+  "emptyState": {
+    "headline": "No apps yet",
+    "description": "Click the + button to add your first application",
+    "button": "Add App"
+  },
+  "modal": {
+    "title": {
+      "add": "Add App",
+      "edit": "Edit App"
+    },
+    "button": {
+      "cancel": "Cancel",
+      "save": "Save App",
+      "update": "Update App",
+      "saving": "Saving...",
+      "updating": "Updating..."
+    },
+    "label": {
+      "appName": "App Name",
+      "url": "URL or IP Address",
+      "icon": "Icon"
+    },
+    "placeholder": {
+      "appName": "e.g. Nextcloud",
+      "url": "http://192.168.1.100:8080",
+      "iconSearch": "Search icons..."
+    },
+    "close": "close"
+  },
+  "search": {
+    "placeholder": "Search apps..."
+  },
+  "icon": {
+    "label": "Icon",
+    "searchPlaceholder": "Search icons...",
+    "loading": "Loading...",
+    "error": "Failed to load icons",
+    "noResults": "No icons found"
+  },
+  "toast": {
+    "close": "close",
+    "success": {
+      "created": "App added",
+      "updated": "App updated",
+      "deleted": "App deleted",
+      "createdDesc": "New item was added to the dashboard.",
+      "updatedDesc": "Changes saved successfully.",
+      "deletedDesc": "Item removed from dashboard."
+    },
+    "error": {
+      "save": "Save failed",
+      "delete": "Delete failed",
+      "connection": "Connection error",
+      "form": "Form error",
+      "saveDesc": "Please fix the errors before saving.",
+      "generic": "An error occurred"
+    }
+  },
+  "confirm": {
+    "title": "Confirm",
+    "deleteApp": "Are you sure you want to delete this app?",
+    "button": {
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "validation": {
+    "nameRequired": "App name is required",
+    "urlRequired": "URL is required",
+    "urlInvalid": "URL must be a valid http or https URL"
+  },
+  "editMode": {
+    "title": "Edit Mode"
+  },
+  "topAppBar": {
+    "addApp": "Add App",
+    "toggleTheme": "Toggle Dark Mode",
+    "toggleEditMode": "Edit Mode"
+  }
+}

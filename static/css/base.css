@@ -1,0 +1,28 @@
+/* Base Styles */
+
+html {
+  scrollbar-color: var(--color-outline) var(--color-surface);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-on-surface);
+  font-family: var(--font-family);
+  transition: background-color var(--transition-slow), color var(--transition-slow);
+}
+
+.required {
+  color: var(--color-red);
+}
+
+/* Glassmorphism base */
+.glass {
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+}
+
+@supports not (backdrop-filter: blur(20px)) {
+  .glass {
+    background-color: var(--color-surface);
+  }
+}

@@ -1,0 +1,39 @@
+# Binaries
+portalon
+*.exe
+
+# Data
+data/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+vendor/
+
+# Node.js
+node_modules/
+
+# Generated assets
+static/css/app.css
+static/js/app.js
+
+# Environment
+.env
+!.env.example
+
+# Sonar
+.scannerwork/
+coverage.out
+sonar-project.properties
+sonar.yml
+coverage/
+
+# Stryker mutation testing reports
+reports/mutation/
+.stryker-tmp

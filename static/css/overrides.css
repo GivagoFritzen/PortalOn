@@ -1,0 +1,101 @@
+/* Tailwind slash-opacity overrides - DARK MODE ONLY */
+
+html.dark .bg-surface-variant\/40,
+.dark .bg-surface-variant\/40 {
+  background-color: color-mix(in srgb, var(--color-surface-variant) 40%, transparent);
+}
+
+@supports not (color-mix(in srgb, red 40%, transparent)) {
+  html.dark .bg-surface-variant\/40,
+  .dark .bg-surface-variant\/40 {
+    background-color: rgba(61, 61, 61, 0.4);
+  }
+}
+
+html.dark .border-outline-variant\/20,
+.dark .border-outline-variant\/20 {
+  border-color: color-mix(in srgb, var(--color-outline-variant) 20%, transparent);
+}
+
+html.dark .border-outline-variant\/30,
+.dark .border-outline-variant\/30 {
+  border-color: color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
+}
+
+html.dark .border-outline-variant\/40,
+.dark .border-outline-variant\/40 {
+  border-color: color-mix(in srgb, var(--color-outline-variant) 40%, transparent);
+}
+
+html.dark .border-outline-variant\/50,
+.dark .border-outline-variant\/50 {
+  border-color: color-mix(in srgb, var(--color-outline-variant) 50%, transparent);
+}
+
+@supports not (color-mix(in srgb, red 20%, transparent)) {
+  html.dark .border-outline-variant\/20,
+  .dark .border-outline-variant\/20 {
+    border-color: rgba(61, 61, 61, 0.2);
+  }
+
+  html.dark .border-outline-variant\/30,
+  .dark .border-outline-variant\/30 {
+    border-color: rgba(61, 61, 61, 0.3);
+  }
+
+  html.dark .border-outline-variant\/40,
+  .dark .border-outline-variant\/40 {
+    border-color: rgba(61, 61, 61, 0.4);
+  }
+
+  html.dark .border-outline-variant\/50,
+  .dark .border-outline-variant\/50 {
+    border-color: rgba(61, 61, 61, 0.5);
+  }
+}
+
+html.dark .hover\:bg-primary\/10:hover,
+.dark .hover\:bg-primary\/10:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+html.dark .focus-within\:ring-primary\/20:focus-within,
+.dark .focus-within\:ring-primary\/20:focus-within {
+  --tw-ring-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+@supports not (color-mix(in srgb, red 10%, transparent)) {
+  html.dark .hover\:bg-primary\/10:hover,
+  .dark .hover\:bg-primary\/10:hover {
+    background-color: rgba(91, 163, 230, 0.1);
+  }
+
+  html.dark .focus-within\:ring-primary\/20:focus-within,
+  .dark .focus-within\:ring-primary\/20:focus-within {
+    --tw-ring-color: rgba(91, 163, 230, 0.2);
+  }
+}
+
+html.dark .placeholder\:text-on-surface-variant\/50::placeholder,
+.dark .placeholder\:text-on-surface-variant\/50::placeholder {
+  color: color-mix(in srgb, var(--color-on-surface-variant) 50%, transparent);
+}
+
+@supports not (color-mix(in srgb, red 50%, transparent)) {
+  html.dark .placeholder\:text-on-surface-variant\/50::placeholder,
+  .dark .placeholder\:text-on-surface-variant\/50::placeholder {
+    color: rgba(160, 160, 160, 0.5);
+  }
+}
+
+html.dark .group:hover .group-hover\:border-primary\/40,
+.dark .group:hover .group-hover\:border-primary\/40 {
+  border-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
+}
+
+@supports not (color-mix(in srgb, red 40%, transparent)) {
+  html.dark .group:hover .group-hover\:border-primary\/40,
+  .dark .group:hover .group-hover\:border-primary\/40 {
+    border-color: rgba(91, 163, 230, 0.4);
+  }
+}

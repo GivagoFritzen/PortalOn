@@ -1,0 +1,16 @@
+{{define "top_app_bar"}}
+<header class="fixed top-0 w-full z-50 glass-nav">
+    <div class="flex justify-between items-center px-grid-margin py-4 w-full max-w-container-max-width mx-auto">
+        <div class="flex items-center gap-3">
+            <img src="/static/logo/portalon.svg" alt="{{.App.Name}}" style="height: 40px; width: auto;" />
+        </div>
+        <!-- Search Bar -->
+        {{template "search_bar" .}}
+        <div class="flex items-center gap-4">
+            {{template "icon_button" dict "Action" "open-modal" "Icon" "add" "Title" .TopAppBar.AddApp}}
+            {{template "icon_button" dict "ID" "theme-btn" "IconID" "theme-icon" "Icon" "dark_mode" "Title" .TopAppBar.ToggleTheme}}
+            {{template "icon_button" dict "ID" "edit-btn" "Action" "toggle-edit-mode" "Icon" "edit" "Title" .TopAppBar.ToggleEditMode}}
+        </div>
+    </div>
+</header>
+{{end}}

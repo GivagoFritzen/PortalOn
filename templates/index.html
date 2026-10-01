@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>{{.Locale.App.PageTitle}}</title>
+    <link rel="icon" type="image/svg+xml" href="/static/logo/portalon.svg">
+    <link rel="stylesheet" href="/static/css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js" integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script>
+    {{componentCSS}}
+</head>
+<body class="font-body min-h-screen flex flex-col antialiased">
+
+<!-- TopAppBar -->
+{{template "top_app_bar" .Locale}}
+
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col items-center pt-[100px] pb-8 px-4 sm:px-8 w-full max-w-container-max-width mx-auto relative z-10">
+    <!-- App Grid -->
+    <div id="app-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-x-4 sm:gap-x-8 md:gap-x-12 gap-y-8 sm:gap-y-12">
+        {{range .Apps}}
+        {{template "app_card" .}}
+        {{end}}
+    </div>
+
+    <!-- Empty State -->
+    {{if not .Apps}}
+    {{template "empty_state" .Locale}}
+    {{end}}
+</main>
+
+<!-- Modal -->
+{{template "modal" .Locale}}
+
+<!-- Toast Notifications Container -->
+<div id="toast-container" class="fixed bottom-5 right-5 z-[300] flex flex-col gap-3 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+<script src="/static/js/app.js?v=3"></script>
+    <script src="/static/js/app-status.js" defer></script>
+</body>
+</html>

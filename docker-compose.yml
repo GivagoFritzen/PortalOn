@@ -1,0 +1,49 @@
+services:
+  portalon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portalon:latest
+    container_name: portalon
+    network_mode: host
+
+    volumes:
+      - portalon-data:/app/data
+
+    environment:
+      PORTALON_DB_PATH: /app/data/portalon.db
+      PORTALON_PORT: "${CONTAINER_PORT:-8888}"
+
+    restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    security_opt:
+      - no-new-privileges:true
+
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - --no-verbose
+        - --tries=1
+        - --spider
+        - http://localhost:${CONTAINER_PORT:-8888}/health
+      interval: 30s
+      timeout: 6s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  portalon-data:
+    driver: local

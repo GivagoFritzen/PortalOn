@@ -1,0 +1,74 @@
+/* PortalOn Components */
+
+/* Form Field Component */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  outline: none;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.form-input:focus {
+  box-shadow: 0 0 0 2px rgba(0, 88, 188, 0.2);
+  border-color: var(--color-primary);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-1);
+  color: var(--color-on-surface-variant);
+}
+
+/* App Card Component */
+.squircle {
+  border-radius: var(--radius-xl);
+}
+
+.squircle-shadow {
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal) var(--transition-bounce);
+}
+
+.squircle-shadow:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.dark .squircle-shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.dark .squircle-shadow:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* Edit mode */
+.edit-mode .edit-controls {
+  display: flex !important;
+}
+
+/* Status Dot Component */
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-status-border);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-dot-online {
+  background-color: #22c55e;
+}
+
+.status-dot-offline {
+  background-color: #ef4444;
+}

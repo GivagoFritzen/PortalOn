@@ -1,0 +1,172 @@
+/* Utility Classes */
+
+/* Container */
+.max-w-container-max-width {
+  max-width: var(--container-max-width);
+}
+
+.px-grid-margin {
+  padding-left: var(--grid-margin);
+  padding-right: var(--grid-margin);
+}
+
+/* Typography utilities */
+.font-body {
+  font-family: var(--font-family);
+}
+
+.text-body-md {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-regular);
+}
+
+.text-headline-md {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-loose);
+  letter-spacing: -0.01em;
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-headline-sm {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-label-md {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-medium);
+}
+
+.text-label-sm {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Glass nav */
+.glass-nav {
+  backdrop-filter: blur(var(--blur-lg));
+  -webkit-backdrop-filter: blur(var(--blur-lg));
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--color-header-border);
+}
+
+@supports not (backdrop-filter: blur(24px)) {
+  .glass-nav {
+    background-color: var(--color-surface);
+  }
+}
+
+.dark .glass-nav {
+  background-color: rgba(26, 27, 31, 0.85);
+}
+
+/* Glass search */
+.glass-search {
+  background-color: var(--color-search-bg);
+  border: 1px solid var(--color-search-border);
+}
+
+.dark .glass-search {
+  background-color: rgba(42, 43, 51, 0.75);
+  border: 1px solid rgba(80, 81, 90, 0.4);
+}
+
+/* Icon button */
+.icon-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-icon-btn);
+  background-color: var(--color-icon-btn-bg);
+  border: 1px solid var(--color-icon-btn-border);
+  transition: background-color var(--transition-fast);
+}
+
+.icon-btn:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+.dark .icon-btn:hover {
+  color: #ffffff;
+  background-color: var(--color-icon-hover);
+}
+
+/* Icon selected preview */
+.icon-selected-preview {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Backdrop blur */
+.backdrop-blur-md {
+  backdrop-filter: blur(var(--blur-sm));
+  -webkit-backdrop-filter: blur(var(--blur-sm));
+}
+
+/* Animations */
+@keyframes progress-drain {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.timer-drain {
+  transform-origin: left center;
+  animation: progress-drain linear forwards;
+}
+
+/* Hover states */
+.hover\:bg-primary\/90:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 90%, black);
+}
+
+@supports not (color-mix(in srgb, red 90%, black)) {
+  .hover\:bg-primary\/90:hover {
+    background-color: var(--color-primary);
+    filter: brightness(0.9);
+  }
+}
+
+.hover\:bg-primary\/10:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 10%, rgba(0 0 0 / 0));
+}
+
+@supports not (color-mix(in srgb, red 10%, transparent)) {
+  .hover\:bg-primary\/10:hover {
+    background-color: rgba(0, 88, 188, 0.1);
+  }
+}
+
+.hover\:bg-error\/90:hover {
+  background-color: color-mix(in srgb, var(--color-red) 90%, black);
+}
+
+@supports not (color-mix(in srgb, red 90%, black)) {
+  .hover\:bg-error\/90:hover {
+    background-color: var(--color-red);
+    filter: brightness(0.9);
+  }
+}
+
+.hover\:bg-surface-container-highest:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.group:hover .group-hover\:text-primary {
+  color: var(--color-primary);
+}

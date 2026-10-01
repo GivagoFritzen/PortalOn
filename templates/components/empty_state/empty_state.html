@@ -1,0 +1,10 @@
+{{define "empty_state"}}
+<div id="empty-state" class="flex flex-col items-center justify-center text-center py-16">
+    <span class="material-symbols-outlined text-6xl mb-4 text-[var(--color-outline-variant)]">dashboard</span>
+    <h2 class="text-headline-md font-semibold mb-2 text-[var(--color-on-surface)]">{{.EmptyState.Headline}}</h2>
+    <p class="text-body-md mb-6 text-[var(--color-on-surface-variant)]">{{.EmptyState.Description}}</p>
+    <button data-action="open-modal" class="px-6 py-3 bg-[var(--color-primary)] text-[var(--color-on-primary)] rounded-full font-semibold hover:bg-[color-mix(in_srgb,_var(--color-primary)_90%,_black)] transition-colors active:scale-95">
+        {{.EmptyState.Button}}
+    </button>
+</div>
+{{end}}

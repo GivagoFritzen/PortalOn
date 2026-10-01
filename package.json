@@ -1,0 +1,36 @@
+{
+  "name": "portalon",
+  "version": "1.0.0",
+  "description": "Self-hosted application portal with iOS/macOS Launchpad-style grid layout.",
+  "main": "static/js/app.js",
+  "scripts": {
+    "build:css": "tailwindcss -i static/css/input.css -o static/css/app.css --minify",
+    "build:js": "esbuild src/portalonapp.ts --bundle --outfile=static/js/app.js --target=es2020 --format=iife --minify",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:mutation": "stryker run",
+    "test:mutation:watch": "stryker run --watch",
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "tailwindcss -i static/css/input.css -o static/css/app.css --watch",
+    "watch:js": "esbuild src/portalonapp.ts --bundle --outfile=static/js/app.js --target=es2020 --format=iife --watch",
+    "watch": "npm run watch:css & npm run watch:js",
+    "sonar": "npm run test:coverage && sonar-scanner"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stryker-mutator/core": "^8.7.1",
+    "@stryker-mutator/typescript-checker": "^8.7.1",
+    "@stryker-mutator/vitest-runner": "^8.7.1",
+    "@types/jsdom": "30.0.0",
+    "@types/node": "^26.6.2",
+    "@vitest/coverage-v8": "^0.34.6",
+    "esbuild": "^0.25.0",
+    "jsdom": "^28.1.0",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "vitest": "^0.34.6"
+  }
+}

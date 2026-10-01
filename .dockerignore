@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Go
+vendor/
+portalon
+*.exe
+*.test
+*.out
+coverage/
+coverage.*
+
+# Node
+node_modules/
+npm-debug.log*
+.npm/
+
+# Build
+dist/
+build/
+tmp/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.yaml
+
+# Documentation
+README*
+*.md
+
+# Local data
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# Environment
+.env
+.env.*
+!.env.example
